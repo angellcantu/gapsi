@@ -26,7 +26,7 @@ async function bootstrap() {
 
 	logger.log(`Main service started on port: ${process.env.PORT || 3000}`);
 
-	if (module.hot) {
+	if (process.env.NODE_ENV == 'development' && module.hot) {
 		module.hot.accept();
 		module.hot.dispose(() => app.close());
 	}
