@@ -1,10 +1,21 @@
+'use strict';
+
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { ConfigModule } from '@nestjs/config';
+import { DatabaseModule } from './database/database.module';
+import { CatalogsModule } from './catalogs/catalogs.module';
+import { ProductsModule } from './products/products.module';
+import { join } from 'path';
 
 @Module({
-  imports: [],
-  controllers: [AppController],
-  providers: [AppService],
+	imports: [
+		ConfigModule.forRoot({
+			isGlobal: true,
+			envFilePath: join(__dirname, '../.env')
+		}),
+		DatabaseModule,
+		CatalogsModule,
+		ProductsModule
+	]
 })
-export class AppModule {}
+export class AppModule { }
