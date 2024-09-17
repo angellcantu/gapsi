@@ -6,27 +6,33 @@
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
   <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+API Rest excersice  with <a href="http://nodejs.org" target="_blank">Node.js</a>.
+
+## Environments variables
+   - First, it's recommendable create a .env file in the root project.
+   - The file must contain the following variables:
+
+```
+# ENVIRONMENTS VARIABLES
+
+# Environments
+NODE_ENV=development
+PORT=3000
+
+# Database credentials
+DB_SERVER=gapsi-1.c1ows4mwwr3i.us-east-2.rds.amazonaws.com
+DB_PORT=1433
+DB_USER=admin
+DB_PASSWORD=n6Io64fYxGlXzM6Hi1zQ
+DB_NAME=gapsi
+```
 
 ## Installation
+
+After clone the repository you must navigate it in the root project an execute the following command:
 
 ```bash
 $ npm install
@@ -58,15 +64,68 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## Open API
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+After run the project you must navigate in the API Restful documentation in the following link: [api documentation](http://localhost:3000/documentation), here you can find all the available services step by step to running it.
+
+## Open API - catalogs examples
+
+* In the <strong>main page</strong> you will find a screen like this:
+
+![Main page](files/main.png)
+
+- We will create a new catalog.
+
+![Creating catalog 1](files/create_catalog_1.png)
+
+![Creating catalog 2](files/create_catalog_2.png)
+
+- Next, we will retrieve the catalogs in the database:
+
+![Retrieve catalogs](files/retrieve_catalogs.png)
+
+- Now, we will retrieve the single catalog information:
+
+![Retrieve single catalog](files/retrieve_single_catalog.png)
+
+- And finally we will update a single catalog:
+
+![Update catalog 1](files/update_catalog_1.png)
+
+![Update catalog 2](files/update_catalog_2.png)
+
+## Open API - products examples
+
+- Creating a new product:
+
+![Create product 1](files/create_product_1.png)
+
+![Create product 2](files/create_product_2.png)
+
+- Next, we will retrieve all the products:
+
+![Retrieve products](files/retrieve_products.png)
+
+- Now, we will retrieve the single product information:
+
+![Retrieve single product](files/retrieve_single_product.png)
+
+- Finally we will update a single product:
+
+![Update product 1](files/update_product_1.png)
+
+![Update product 2](files/update_product_2.png)
+
+## AWS Services
+
+- We use a Amazon RDS database with SQL Server to save the <strong>catalogs</strong> and <strong>products</strong>.
+
+![AWS RDS](files/aws_rds.png)
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Author - Jose Cantu
+- LinkedIn - https://www.linkedin.com/in/jacantual
 
 ## License
 
